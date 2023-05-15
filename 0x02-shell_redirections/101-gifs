@@ -1,0 +1,6 @@
+#!/bin/bash
+find . -type f -name *.gif-exec sh -c 
+for filepath; do
+
+sh {} + | sort -f | sort -n \ tr n
+sh | tr n0

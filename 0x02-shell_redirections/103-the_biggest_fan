@@ -1,0 +1,8 @@
+#!/bin/bash
+while read -r line; do
+host=$(echo "$line"| cut -f1)
+((count [$host]++))
+done
+for host in "${!count[@]}" | sort -nr -k2 | head -n 11; do
+echo "${count[$host]} requests from $host"
+done 
