@@ -1,5 +1,2 @@
 #!/bin/bash
-num_dirs=$(find . -type d -not -path */.*-mindepth1 -maxdepth1 |wc -1)
-num_subdirs=$(find . -type d -not -path */.*-mindepth 2 |wc -1)
-echo "Number of directories in the current directory (excluding current and parent directories: $num_dirs"
-echo "Number of subdirectories in the current directory (excluding current and parent directories):$num_subdirs"
+find ./* -type d -print | wc -l
